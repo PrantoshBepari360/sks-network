@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Raleway:wght@300;400;500;600;700;900&display=swap");
+
+.background-img {
+  background-image: url(../src/assets/img/hero-bg2.jpg);
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+}
