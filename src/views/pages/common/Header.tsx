@@ -1,39 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/icon/logo.png";
+import { useAuth } from "./../../components/useProvider/useAuth";
 
 const Navlinks = [
   {
     href: "/home",
-    icon: "icon",
+    icon: <i className="fa-solid fa-house-user" />,
     label: "Home",
   },
   {
     href: "/about",
-    icon: "icon",
+    icon: <i className="fa-solid fa-address-card" />,
     label: "About",
   },
   {
     href: "/services",
-    icon: "icon",
+    icon: <i className="fa-brands fa-servicestack" />,
     label: "Services",
   },
   {
     href: "/packages",
-    icon: "icon",
+    icon: <i className="fa-solid fa-wifi" />,
     label: "Internet Packages",
   },
   {
     href: "/contact",
-    icon: "icon",
+    icon: <i className="fa-solid fa-address-book" />,
     label: "Contact",
   },
 ];
 
 export const Header = () => {
+  const { user, logOut } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
   const openMobileMenu = () => setIsMobileMenuOpen(true);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  const [lightMode, setLightMode] = useState(false);
+  const toggleDarkMode = () => setLightMode(true);
+  const toggleLiteMode = () => setLightMode(false);
 
   return (
     <div className="md:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto">
@@ -75,42 +81,51 @@ export const Header = () => {
             href="https://www.facebook.com/bepari.prantosh.5/"
             target="_blank"
             rel="noopener"
-            className="mr-6 text-gray-800 text-base font-medium hover:text-lime-500 md:mr-4 lg:mr-5 xl:mr-6"
+            className="mr-6 text-gray-800 text-base font-medium hover:text-orange-400 md:mr-4 lg:mr-5 xl:mr-6"
           >
             Support
           </a>
         </div>
 
         <div className="flex items-center gap-1.5 md:gap-2.5">
-          <button className="w-11 h-11 items-center justify-center flex text-2xl border border-gray-300 rounded-full">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 16 16"
-              className="p-0.5"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"></path>
-            </svg>
+          <button className="">
+            {lightMode ? (
+              <img
+                onClick={toggleLiteMode}
+                src="https://www.svgrepo.com/show/72162/moon.svg"
+                alt="Sun SVG File"
+                title="Sun SVG File"
+                className="p-1.5"
+                width="35"
+                height="35"
+              />
+            ) : (
+              <img
+                onClick={toggleDarkMode}
+                src="https://www.svgrepo.com/show/20546/sun.svg"
+                alt="Moon SVG Vector"
+                title="Moon SVG Vector"
+                className="p-1.5"
+                width="35"
+                height="35"
+              />
+            )}
           </button>
-          <Link to="/login">
-            <button className="whitespace-nowrap text-xl md:text-xl p-2.5 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                strokeWidth="0"
-                viewBox="0 0 16 16"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+
+          <button>
+            {user?.email ? (
+              <span
+                onClick={logOut}
+                className="text-gray-800 text-base font-medium hover:text-orange-400"
               >
-                <path d="M1 12v-1h9v1H1zm0-5h14v1H1V7zm11-4v1H1V3h11z"></path>
-              </svg>
-            </button>
-          </Link>
+                Log out
+              </span>
+            ) : (
+              <Link to="/login">
+                <span>Log in</span>
+              </Link>
+            )}
+          </button>
         </div>
       </div>
 
@@ -174,7 +189,7 @@ export const Header = () => {
                   className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100"
                 >
                   <p className="flex items-center gap-6 text-2xl">
-                    icon
+                    <i className="fa-solid fa-phone"></i>
                     <span className="text-base">Support</span>
                   </p>
                   {">"}

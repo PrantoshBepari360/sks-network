@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const Services = () => {
   return (
-    <div className="w-7/12 mx-auto py-16">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
       <div className="text-left" style={{ fontFamily: "Raleway, sans-serif" }}>
         <div className="flex items-center mb-2">
           <h1 className="text-sm font-bold tracking-widest text-[#aaaaaa] mr-3">
@@ -17,8 +17,8 @@ export const Services = () => {
           CHECK OUR SERVICES
         </h1>
       </div>
-      <div className="grid grid-cols-12 gap-4">
-        <div className="col-span-4 border rounded">
+      <div className="grid grid-cols-6 gap-4 md:grid-cols-9">
+        <div className="col-span-3 border rounded">
           <img src={course} alt="" />
           <div className="text-left py-5 px-5">
             <div className="flex">
@@ -37,7 +37,7 @@ export const Services = () => {
             </p>
           </div>
         </div>
-        <div className="col-span-4 border rounded">
+        <div className="col-span-3 border rounded">
           <img src={course1} alt="" />
           <div className="py-5 px-5">
             <div className="flex">
@@ -52,7 +52,7 @@ export const Services = () => {
               Static and Dynamic
             </h1>
 
-            <div className="mt-3 ml-10 text-left">
+            <div className="mt-3 ml-0 text-left sm:ml-10">
               <p className="">We develop for you:</p>
               <div className="flex items-center">
                 <i className="fa-regular fa-circle-check text-[#3AC162] mr-1"></i>
@@ -60,16 +60,16 @@ export const Services = () => {
               </div>
               <div className="flex items-center">
                 <i className="fa-regular fa-circle-check text-[#3AC162] mr-1"></i>
-                <p className="">eCommerce Website</p>
+                <p className="">E-Commerce Website</p>
               </div>
               <div className="flex items-center">
                 <i className="fa-regular fa-circle-check text-[#3AC162] mr-1"></i>
-                <p className="">eCommerce and delivery App</p>
+                <p className="">E-Commerce and delivery App</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-span-4 border rounded">
+        <div className="col-span-3 border rounded">
           <img src={course2} alt="" />
           <div className="py-5 px-5">
             <div className="flex">
@@ -82,7 +82,7 @@ export const Services = () => {
             <h1 className="mt-3 text-left  text-amber-500 text-xl font-bold">
               Hosting with SSL Certificate
             </h1>
-            <div className="mt-3 ml-10 text-left">
+            <div className="mt-3 ml-0 text-left sm:ml-10">
               <p className="">We Provide:</p>
               <div className="flex items-center">
                 <i className="fa-regular fa-circle-check text-[#3AC162] mr-1"></i>

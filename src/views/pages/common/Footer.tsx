@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <div className="w-full bg-gray-900">
-      <div className="w-7/12 mx-auto text-white text-left">
-        <div className="flex items-center justify-between py-10">
+      <div className="w-11/12 mx-auto py-10 lg:py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 text-white text-left">
+        <div className="grid grid-cols-1 gap-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col px-3">
-            <p className="mb-5">Services</p>
+            <p className="mb-4">Services</p>
+            <hr className="mb-2" />
             <Link to="/services" className="mb-2">
               Internet service
             </Link>
@@ -18,7 +19,8 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col px-3">
-            <p className="mb-5">Internet Packages</p>
+            <p className="mb-4">Internet Packages</p>
+            <hr className="mb-2" />
             <Link to="/pricing2" className="mb-2">
               SME
             </Link>
@@ -30,7 +32,8 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col px-3">
-            <p className="mb-5">Corporate Office</p>
+            <p className="mb-4">Corporate Office</p>
+            <hr className="mb-2" />
             <p className="mb-2">Dhamusa, Dasar, Madaripur,</p>
             <p className="mb-2">Dhaka, Bangladesh-7900</p>
             <Link to="" className="mb-2 flex items-center">
@@ -38,7 +41,8 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col px-3">
-            <p className="mb-5">Contuct</p>
+            <p className="mb-4">Contuct</p>
+            <hr className="mb-2" />
             <Link to="" className="mb-2 flex items-center">
               <i className="fa-solid fa-phone mr-2"></i> +880 1833-078059
             </Link>
@@ -63,7 +67,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="px-3 pt-5 pb-12">
-          <div className="flex">
+          <div className="flex-none lg:flex">
             <p>
               Copyright © 2022{" "}
               <span className="font-medium text-amber-500">
@@ -71,7 +75,7 @@ export const Footer = () => {
               </span>{" "}
               All Rights Reserved
             </p>
-            <div className="ml-auto">
+            <div className="ml-auto mt-8 flex justify-center lg:mt-0">
               <div className="flex">
                 <a
                   rel="noopener noreferrer"

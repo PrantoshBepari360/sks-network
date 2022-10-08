@@ -87,8 +87,8 @@ export const useFirebase = () => {
   useEffect(() => {
     fetch(`https://dry-shelf-35127.herokuapp.com/users/${(user as any).email}`)
       .then((res) => res.json())
-      .then((data) => setAdmin(data.admin));
-  }, [(user as any).email]);
+      .then((data) => setAdmin(data?.admin));
+  }, [user]);
 
   const logOut = () => {
     signOut(auth)

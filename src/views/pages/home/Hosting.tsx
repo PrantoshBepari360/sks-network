@@ -2,12 +2,9 @@ import image1 from "../../../assets/img/home-2.png";
 
 export const Hosting = () => {
   return (
-    <div className="w-7/12 mx-auto py-14">
-      <div className="flex">
-        <div className="w-6/12 pr-4">
-          <img className="-mt-6" src={image1} alt="" />
-        </div>
-        <div className="w-6/12 pl-4">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
+      <div className="flex-none sm:flex">
+        <div className="w-12/12 pr-4 sm:w-6/12">
           <p className="text-left leading-none mb-4">
             <b className="text-[40px] text-[#3AC162]">Web Development</b>
             <br />
@@ -25,6 +22,9 @@ export const Hosting = () => {
           <div className="text-left font-semibold text-[#3AC162]">
             <a href="/services">Learn More</a>
           </div>
+        </div>
+        <div className="w-8/12 mx-auto pr-4 sm:w-6/12 sm:order-first">
+          <img className="-mt-6" src={image1} alt="" />
         </div>
       </div>
     </div>

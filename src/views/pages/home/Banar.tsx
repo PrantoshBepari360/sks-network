@@ -3,7 +3,7 @@ import "swiper/css";
 
 export const Banar = () => {
   return (
-    <div className="w-7/12 mx-auto text-white text-left leading-tight pt-72">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 text-white text-left leading-tight pt-72">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
@@ -13,7 +13,7 @@ export const Banar = () => {
         <SwiperSlide>
           <div className="pb-10">
             <h1
-              className="text-5xl font-bold leading-tight mb-2"
+              className="text-3xl font-bold leading-tight mb-2 sm:text-5xl"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Ready To Connect,
@@ -21,10 +21,9 @@ export const Banar = () => {
               Your New Internet
             </h1>
             <h2
-              className="mb-10"
+              className="mb-10 text-xl sm:text-2xl"
               style={{
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
               }}
             >
               We are team of IT experts making your connection smoother &amp;
@@ -42,7 +41,7 @@ export const Banar = () => {
         <SwiperSlide>
           <div className="pb-10">
             <h1
-              className="text-5xl font-bold leading-tight mb-2"
+              className="text-3xl font-bold leading-tight mb-2 sm:text-5xl"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Ready To Connect,
@@ -50,47 +49,17 @@ export const Banar = () => {
               Your New Internet
             </h1>
             <h2
-              className="mb-10"
+              className="mb-10 text-xl sm:text-2xl"
               style={{
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
               }}
             >
               We are team of IT experts making your connection smoother &amp;
               faster
             </h2>
             <a
-              href="/pricing3"
-              className="px-8 py-3 border-2 border-white rounded-full hover:bg-lime-500 hover:border-lime-500 text-lg"
-              style={{ fontFamily: "Raleway, sans-serif" }}
-            >
-              Get Started
-            </a>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="pb-10">
-            <h1
-              className="text-5xl font-bold leading-tight mb-2"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
-              Ready To Connect,
-              <br />
-              Your New Internet
-            </h1>
-            <h2
-              className="mb-10"
-              style={{
-                fontFamily: "Raleway, sans-serif",
-                fontSize: "24px",
-              }}
-            >
-              We are team of IT experts making your connection smoother &amp;
-              faster
-            </h2>
-            <a
-              href="/pricing2"
-              className="px-8 py-3 border-2 border-white rounded-full hover:bg-lime-500 hover:border-lime-500 text-lg"
+              href="/pricing4"
+              className="px-8 py-3 border-2 border-white rounded-full transition hover:bg-lime-500 hover:border-lime-500 text-lg"
               style={{ fontFamily: "Raleway, sans-serif" }}
             >
               Get Started

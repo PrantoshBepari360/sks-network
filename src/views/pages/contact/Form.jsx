@@ -27,10 +27,10 @@ export const Form = () => {
     setSuccess(true);
   };
   return (
-    <div className="w-7/12 mx-auto py-20">
-      <div className="grid grid-cols-9 gap-4">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
+      <div className="grid grid-cols-4 gap-4 sm:grid-cols-6 lg:grid-cols-9">
         <div className="col-span-6">
-          <form ref={form} onSubmit={sendEmail}>
+          <form className="mb-8" ref={form} onSubmit={sendEmail}>
             <div className="flex mb-7">
               <input
                 type="text"

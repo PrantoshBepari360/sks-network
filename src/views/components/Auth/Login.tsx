@@ -5,8 +5,7 @@ import { Header } from "../../pages/common/Header";
 import { useAuth } from "./../useProvider/useAuth";
 
 export const Login = () => {
-  const { isLoading, loginUser, signInWidthGoogle, logOut, authError } =
-    useAuth();
+  const { isLoading, loginUser, signInWidthGoogle, authError } = useAuth();
   const [showPass, setShowPass] = useState(false);
 
   const [Input, setInput] = useState({
@@ -29,10 +28,7 @@ export const Login = () => {
         <div className="w-full md:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto py-20 mt-10">
           <div className="flex flex-col justify-start items-start mb-10">
             <h1 className="text-gray-900 font-bold text-3xl font-title pl-4">
-              Sign in to (SKS.N.S.L){" "}
-              <span>
-                <button onClick={logOut}>Sign Out</button>
-              </span>
+              Sign in to (SKS.N.S.L)
             </h1>
           </div>
           <div className="rounded-lg px-4">

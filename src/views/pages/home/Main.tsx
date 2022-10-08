@@ -3,7 +3,7 @@ import image1 from "../../../assets/img/home-1.png";
 
 export const Main = () => {
   return (
-    <div className="w-7/12 mx-auto">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
       <div className="text-left pt-10">
         <h1 className="text-3xl" style={{ fontFamily: "Raleway, sans-serif" }}>
           Welcome to Sks Network Systems Limited (Sks.N.S.L)
@@ -15,8 +15,8 @@ export const Main = () => {
         </p>
       </div>
 
-      <div className="flex">
-        <div className="w-6/12 text-justify pr-4">
+      <div className="flex-none sm:flex">
+        <div className="w-12/12 text-justify pr-4 sm:w-6/12">
           <p className="pb-3 pt-5">
             In tandem with the dial-up regime, back in the late 10s, Sks made
             way to spreading the same over Madaripur city. Improvisation,
@@ -41,11 +41,11 @@ export const Main = () => {
             enrolled into the SEA-ME-WE-4 Submarine Optical Fiber Network in
             July 2018.
           </p>
-          <div className="mt-12">
+          <div className="flex justify-center mt-12">
             <img src={image} alt="Company logo" />
           </div>
         </div>
-        <div className="w-6/12 pl-4">
+        <div className="hidden w-6/12 pl-4 sm:block">
           <img src={image1} className="-mt-6" alt="Service logo" />
         </div>
       </div>
