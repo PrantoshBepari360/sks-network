@@ -2,7 +2,7 @@ export const Sks = () => {
   return (
     <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
       <div
-        className="grid grid-cols-4 gap-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9"
+        className="grid grid-cols-2 gap-4 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9"
         style={{ fontFamily: "Raleway, sans-serif" }}
       >
         <div className="col-span-2 border rounded pt-10 px-6 bg-[#5fcf80] text-white sm:col-span-3 sm:px-8">
@@ -54,7 +54,7 @@ export const Sks = () => {
         </div>
       </div>
       <div
-        className="grid grid-cols-2 gap-4 pt-16 font-medium sm:grid-cols-3"
+        className="grid grid-cols-1 gap-4 pt-16 font-medium sm:grid-cols-2 md:grid-cols-3"
         style={{ fontFamily: "Raleway, sans-serif" }}
       >
         <div className="col-span-1 border hover:border-[#5fcf80] animation duration-200 ease-in-out rounded p-6 sm:p-8">

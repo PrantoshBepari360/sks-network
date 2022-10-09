@@ -17,7 +17,7 @@ export const Services = () => {
           CHECK OUR SERVICES
         </h1>
       </div>
-      <div className="grid grid-cols-6 gap-4 md:grid-cols-9">
+      <div className="grid grid-cols-3 gap-4 sm:grid-cols-6 md:grid-cols-9">
         <div className="col-span-3 border rounded">
           <img src={course} alt="" />
           <div className="text-left py-5 px-5">

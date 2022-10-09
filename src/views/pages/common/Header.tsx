@@ -173,26 +173,24 @@ export const Header = () => {
                   <Link
                     to={navlink.href}
                     key={navlink.label}
-                    className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100"
+                    className="flex items-center justify-between p-3 hover:bg-gray-100 border-b-2 border-b-black-500"
                   >
                     <p className="flex items-center gap-6 text-2xl">
                       {navlink.icon}
                       <span className="text-base">{navlink.label}</span>
                     </p>
-                    {">"}
                   </Link>
                 ))}
                 <a
                   href="https://www.facebook.com/bepari.prantosh.5/"
                   target="_blank"
                   rel="noopener"
-                  className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-100"
+                  className="flex items-center justify-between p-3 hover:bg-gray-100 border-b-2 border-b-black-500"
                 >
                   <p className="flex items-center gap-6 text-2xl">
                     <i className="fa-solid fa-phone"></i>
                     <span className="text-base">Support</span>
                   </p>
-                  {">"}
                 </a>
               </nav>
             </div>
