@@ -30,7 +30,7 @@ export const Banar = () => {
               faster
             </h2>
             <a
-              href="/pricing4"
+              href="/all"
               className="px-8 py-3 border-2 border-white rounded-full transition hover:bg-lime-500 hover:border-lime-500 text-lg"
               style={{ fontFamily: "Raleway, sans-serif" }}
             >

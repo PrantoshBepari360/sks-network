@@ -4,6 +4,7 @@ import { Header } from '../../common/Header'
 import { Akdesh } from '../Akdesh'
 import { Banner } from '../Banner'
 import { Mix } from '../Mix'
+import { FormLink } from './FormLink'
 
 export const RagulerMix = () => {
   return (
@@ -14,6 +15,9 @@ export const RagulerMix = () => {
       <br />
       <div className="w-full bg-[#5fcf80]">
         <Banner></Banner>
+      </div>
+      <div className="w-full">
+        <FormLink></FormLink>
       </div>
       <div className="w-full">
         <Mix></Mix>

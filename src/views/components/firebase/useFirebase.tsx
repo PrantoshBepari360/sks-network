@@ -20,10 +20,17 @@ export const useFirebase = () => {
   const [authError, setAuthError] = useState("");
   const [admin, setAdmin] = useState(false);
 
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
-  const registerUser = (email: string, password: string, displayName: string) => {
+  const registerUser = (
+    email: string,
+    password: string,
+    displayName: string
+  ) => {
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -64,6 +71,7 @@ export const useFirebase = () => {
         const { email, displayName } = userCredential.user;
         saveUser(email as string, displayName as string, "PUT");
         setAuthError("");
+        setIsLoginOpen(false);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -85,7 +93,7 @@ export const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://dry-shelf-35127.herokuapp.com/users/${(user as any).email}`)
+    fetch(`https://travel-agency-0dnf.onrender.com/users/${(user as any).email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data?.admin));
   }, [user]);
@@ -121,5 +129,9 @@ export const useFirebase = () => {
     logOut,
     admin,
     authError,
+    isLoginOpen,
+    setIsLoginOpen,
+    isRegisterOpen,
+    setIsRegisterOpen,
   };
 };

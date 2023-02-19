@@ -10,6 +10,8 @@ import { Service } from "../services/Service";
 import { Register } from "../../components/Auth/Register";
 import { Login } from "../../components/Auth/Login";
 import { PrivetOutlet } from "../../components/Auth/PrivetOutlet";
+import { All } from "../internet/All";
+import { Support } from "../support/Support";
 
 export const Main = () => {
   return (
@@ -19,10 +21,11 @@ export const Main = () => {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Service />}></Route>
-        <Route path="/packages" element={<Internet />}></Route>
-        <Route path="/*" element={<PrivetOutlet />}>
-          <Route path="contact" element={<Contact />}></Route>
-        </Route>
+        <Route path="/packages" element={<All />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/support" element={<Support />}></Route>
+        <Route path="/*" element={<PrivetOutlet />}></Route>
+        <Route path="/all" element={<All />}></Route>
         <Route path="/pricing" element={<Internet />}></Route>
         <Route path="/pricing2" element={<SmeMix />}></Route>
         <Route path="/pricing3" element={<HomeMix />}></Route>

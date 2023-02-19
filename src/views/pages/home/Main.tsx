@@ -1,4 +1,4 @@
-import image from "../../../assets/img/sparksystems.png";
+import image from "../../../assets/img/Sksn.jpg";
 import image1 from "../../../assets/img/home-1.png";
 
 export const Main = () => {
