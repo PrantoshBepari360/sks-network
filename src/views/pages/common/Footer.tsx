@@ -8,26 +8,26 @@ export const Footer = () => {
           <div className="flex flex-col px-3">
             <p className="mb-4">Services</p>
             <hr className="mb-2" />
-            <Link to="/services" className="mb-2">
+            <Link to="/services" className="mb-2 hover:underline">
               Internet service
             </Link>
-            <Link to="/services" className="mb-2">
+            <Link to="/services" className="mb-2 hover:underline">
               Web Development
             </Link>
-            <Link to="/services" className="mb-2">
+            <Link to="/services" className="mb-2 hover:underline">
               Hosting
             </Link>
           </div>
           <div className="flex flex-col px-3">
             <p className="mb-4">Internet Packages</p>
             <hr className="mb-2" />
-            <Link to="/pricing2" className="mb-2">
+            <Link to="/pricing2" className="mb-2 hover:underline">
               SME
             </Link>
-            <Link to="/pricing" className="mb-2">
+            <Link to="/pricing" className="mb-2 hover:underline">
               Corporate
             </Link>
-            <Link to="/pricing4" className="mb-2">
+            <Link to="/pricing4" className="mb-2 hover:underline">
               এক দেশ এক রেট
             </Link>
           </div>
@@ -36,24 +36,26 @@ export const Footer = () => {
             <hr className="mb-2" />
             <p className="mb-2">Dhamusa, Dasar, Madaripur,</p>
             <p className="mb-2">Dhaka, Bangladesh-7900</p>
-            <Link to="" className="mb-2 flex items-center">
-              <i className="fa-solid fa-phone mr-2"></i> +880 1833-078059
-            </Link>
+            <a className="mb-2 flex items-center" href="tel:+8801518331287">
+              <i className="fa-solid fa-phone mr-2"></i>{" "}
+              <span className="hover:underline">+880 1518-331287</span>
+            </a>
           </div>
           <div className="flex flex-col px-3">
             <p className="mb-4">Contuct</p>
             <hr className="mb-2" />
-            <Link to="" className="mb-2 flex items-center">
-              <i className="fa-solid fa-phone mr-2"></i> +880 1833-078059
-            </Link>
+            <a className="mb-2 flex items-center" href="tel:+8801833078059">
+              <i className="fa-solid fa-phone mr-2"></i>
+              <span className="hover:underline">+880 1833-078059</span>
+            </a>
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://web.whatsapp.com/"
               className="mb-2 flex"
             >
-              <i className="fa-brands fa-whatsapp mr-2 items-center"></i> +880
-              1833-078059
+              <i className="fa-brands fa-whatsapp mr-2 items-center"></i>{" "}
+              <span className="hover:underline">+880 1833-078059</span>
             </a>
             <a
               rel="noopener noreferrer"
@@ -62,7 +64,9 @@ export const Footer = () => {
               className="mb-2 flex items-center"
             >
               <i className="fa-solid fa-envelope mr-2"></i>
-              bepariprantosh360@gmail.com
+              <span className="hover:underline">
+                bepariprantosh360@gmail.com
+              </span>
             </a>
           </div>
         </div>
@@ -75,7 +79,7 @@ export const Footer = () => {
               </span>{" "}
               All Rights Reserved
             </p>
-            <div className="ml-auto mt-8 flex justify-center lg:mt-0">
+            {/* <div className="ml-auto mt-8 flex justify-center lg:mt-0">
               <div className="flex">
                 <a
                   rel="noopener noreferrer"
@@ -94,7 +98,7 @@ export const Footer = () => {
                   <i className="fa-brands fa-facebook fa-2xl"></i>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

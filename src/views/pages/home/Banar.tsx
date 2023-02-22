@@ -1,14 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import "swiper/css";
 
 export const Banar = () => {
   return (
     <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 text-white text-left leading-tight pt-48 lg:pt-72">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{}}
+        modules={[Autoplay]}
       >
         <SwiperSlide>
           <div className="pb-10">
@@ -58,7 +59,7 @@ export const Banar = () => {
               faster
             </h2>
             <a
-              href="/pricing4"
+              href="/all"
               className="px-8 py-3 border-2 border-white rounded-full transition hover:bg-lime-500 hover:border-lime-500 text-lg"
               style={{ fontFamily: "Raleway, sans-serif" }}
             >
