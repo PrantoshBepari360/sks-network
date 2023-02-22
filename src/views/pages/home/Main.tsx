@@ -6,10 +6,10 @@ export const Main = () => {
     <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12">
       <div className="text-left pt-10">
         <h1 className="text-3xl" style={{ fontFamily: "Raleway, sans-serif" }}>
-          Welcome to Sks Network Systems Limited (Sks.N.S.L)
+          Welcome to Sks Network Systems Limited (Sks Network)
         </h1>
         <p className="text-4xl">
-          <b className="text-[#3AC162]">22 Years of</b>
+          <b className="text-[#3AC162]">2 Years of</b>
           <br />
           <b className="text-[#F58634]">Experience</b>
         </p>
@@ -39,7 +39,7 @@ export const Main = () => {
             available. Aligned with that, and in expand the compartmented
             typical arena of service provision in this particular sector, Sks
             enrolled into the SEA-ME-WE-4 Submarine Optical Fiber Network in
-            July 2018.
+            July 2020.
           </p>
           <div className="flex justify-center mt-12">
             <img src={image} alt="Company logo" />
