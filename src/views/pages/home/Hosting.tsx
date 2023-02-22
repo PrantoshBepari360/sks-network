@@ -19,7 +19,7 @@ export const Hosting = () => {
             parameters. We learn every aspect of your business and use all
             related information as a strong framework for the design.
           </p>
-          <div className="text-left font-semibold text-[#3AC162]">
+          <div className="text-left font-semibold text-[#3AC162] hover:underline">
             <a href="/services">Learn More</a>
           </div>
         </div>
