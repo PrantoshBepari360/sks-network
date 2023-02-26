@@ -30,6 +30,23 @@ const Navlinks = [
     icon: <i className="fa-solid fa-address-book" />,
     label: "Contact",
   },
+  {
+    href: "/support",
+    icon: <i className="fa-solid fa-address-book" />,
+    label: "Support",
+  },
+  {
+    href: "http://smartbox.digital/jwtv1/index.php",
+    target: "_blank",
+    icon: <i className="fa-solid fa-address-book" />,
+    label: "Live-Tv",
+  },
+  {
+    href: "http://www.metromedia.digital",
+    target: "_blank",
+    icon: <i className="fa-solid fa-address-book" />,
+    label: "Ftv",
+  },
 ];
 
 export const Header = () => {
@@ -66,7 +83,7 @@ export const Header = () => {
             </button>
           </div>
 
-          <Link to="/" className="w-38 sm:w-18 md:w-28">
+          <Link to="/" className="w-38 sm:w-18 md:w-28 mr-2 lg:hidden xl:block">
             <img src={logo} alt="" />
           </Link>
 
@@ -74,18 +91,13 @@ export const Header = () => {
             {Navlinks?.map((navlink) => (
               <Link
                 to={navlink.href}
+                target={navlink.target}
                 key={navlink.label}
                 className="mr-6 text-gray-800 text-base font-medium hover:text-lime-500 md:mr-4 lg:mr-5 xl:mr-6"
               >
                 <span className="text-base">{navlink.label}</span>
               </Link>
             ))}
-            <Link
-              to="/support"
-              className="mr-6 text-gray-800 text-base font-medium hover:text-orange-400 md:mr-4 lg:mr-5 xl:mr-6"
-            >
-              Support
-            </Link>
           </div>
 
           <div className="flex items-center gap-1.5 md:gap-2.5">

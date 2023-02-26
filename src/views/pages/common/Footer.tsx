@@ -51,7 +51,7 @@ export const Footer = () => {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://web.whatsapp.com/"
+              href="https://api.whatsapp.com/send?phone=8801833078059"
               className="mb-2 flex"
             >
               <i className="fa-brands fa-whatsapp mr-2 items-center"></i>{" "}
@@ -60,7 +60,7 @@ export const Footer = () => {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://mailto:bepariprantosh360@gmail.com"
+              href="mailto:bepariprantosh360@gmail.com?subject=Mail for SKS Network."
               className="mb-2 flex items-center"
             >
               <i className="fa-solid fa-envelope mr-2"></i>

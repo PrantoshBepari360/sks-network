@@ -50,16 +50,21 @@ export const Support = () => {
                 </b>
               </p>
               <p className="text-justify mb-4 font-semibold text-[#e3e3e3]">
-                Hello!! I'm Prantosh Bepari, A Junior Full Stack Web Developer &
-                passionate about Web Development. I develop Web App, Mobile App
-                and Desktop App. My core skill is based on JavaScript and I love
-                to do most the things using JavaScript. I love to make the web
-                more open to the world. I'm available for any kind of job
-                opportunity that suits my interests.
+                হ্যালো!! আমি প্রানতোষ বেপারী, একজন জুনিয়র ফুল স্ট্যাক ওয়েব
+                ডেভেলপার এবং ওয়েব ডেভেলপমেন্টের প্রতি অনুরাগী। আমি ওয়েব
+                অ্যাপস, মোবাইল অ্যাপস এবং ডেস্কটপ অ্যাপস ডেভেলপ করি। আমার মূল
+                দক্ষতা জাভাস্ক্রিপ্টের উপর ভিত্তি করে এবং আমি জাভাস্ক্রিপ্ট
+                ব্যবহার করে বেশিরভাগ জিনিস করতে পছন্দ করি। আমি ওয়েবকে বিশ্বের
+                কাছে আরও উন্মুক্ত করতে ভালোবাসি। আমি আমার আগ্রহের জন্য উপযুক্ত
+                যে কোনো ধরনের কাজের সুযোগের জন্য উপলব্ধ।
               </p>
               <div className="text-left font-semibold text-[#3AC162] hover:underline">
-                <a href="https://prantosh.vercel.app/" target="_blank">
-                  Learn More{" "}
+                <a
+                  href="https://prantosh.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  আরও জানুন{" "}
                 </a>
               </div>
             </div>
@@ -108,6 +113,7 @@ export const Support = () => {
                   type="button"
                   href="https://www.facebook.com/bepari.prantosh.5/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <div className="flex gap-2 py-2 px-5 rounded-full bg-sky-500 hover:bg-sky-400">
                     <span className="">
@@ -136,7 +142,7 @@ export const Support = () => {
             </div>
             <div className="flex w-full flex-col justify-center space-y-8">
               <div className="mx-auto">
-                <img src={support}></img>
+                <img src={support} alt="Support"></img>
               </div>
             </div>
           </div>
