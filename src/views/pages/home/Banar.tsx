@@ -4,7 +4,7 @@ import "swiper/css";
 
 export const Banar = () => {
   return (
-    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 text-white text-left leading-tight pt-48 lg:pt-72">
+    <div className="w-11/12 mx-auto py-20 sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 text-white text-left leading-tight pt-48 lg:pt-72 lg:pb-52">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

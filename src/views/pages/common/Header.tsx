@@ -197,15 +197,6 @@ export const Header = () => {
                       </p>
                     </Link>
                   ))}
-                  <Link
-                    to="/support"
-                    className="flex items-center justify-between p-3 hover:bg-gray-100 border-b-2 border-b-black-500"
-                  >
-                    <p className="flex items-center gap-6 text-2xl">
-                      <i className="fa-solid fa-phone"></i>
-                      <span className="text-base">Support</span>
-                    </p>
-                  </Link>
                 </nav>
               </div>
             </div>
