@@ -13,7 +13,10 @@ module.exports = {
       zIndex: {
         100: "100",
       },
-    },
+      screens: {
+        'lg': '1100px',
+      }
+    }
   },
   plugins: [],
 };

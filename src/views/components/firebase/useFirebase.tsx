@@ -29,7 +29,9 @@ export const useFirebase = () => {
   const registerUser = (
     email: string,
     password: string,
-    displayName: string
+    displayName: string,
+    location: any,
+    navigate: any
   ) => {
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
@@ -45,6 +47,8 @@ export const useFirebase = () => {
         })
           .then(() => {})
           .catch((error) => {});
+        const destination = location?.state?.from || "/home";
+        navigate(destination);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -52,11 +56,18 @@ export const useFirebase = () => {
       .finally(() => setIsloading(false));
   };
 
-  const loginUser = (email: string, password: string) => {
+  const loginUser = (
+    email: string,
+    password: string,
+    location: any,
+    navigate: any
+  ) => {
     setIsloading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError("");
+        const destination = location?.state?.from || "/home";
+        navigate(destination);
       })
       .catch((error) => {
         setAuthError(error.message);
@@ -64,13 +75,15 @@ export const useFirebase = () => {
       .finally(() => setIsloading(false));
   };
 
-  const signInWidthGoogle = () => {
+  const signInWidthGoogle = (location: any, navigate: any) => {
     setIsloading(true);
     signInWithPopup(auth, googleProvider)
       .then((userCredential) => {
         const { email, displayName } = userCredential.user;
         saveUser(email as string, displayName as string, "PUT");
         setAuthError("");
+        const destination = location?.state?.from || "/home";
+        navigate(destination);
         setIsLoginOpen(false);
       })
       .catch((error) => {
@@ -93,7 +106,9 @@ export const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://travel-agency-0dnf.onrender.com/users/${(user as any).email}`)
+    fetch(
+      `https://travel-agency-0dnf.onrender.com/users/${(user as any).email}`
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data?.admin));
   }, [user]);
@@ -111,7 +126,7 @@ export const useFirebase = () => {
 
   const saveUser = (email: string, displayName: string, method: string) => {
     const user = { email, displayName };
-    fetch("https://dry-shelf-35127.herokuapp.com/users", {
+    fetch("https://travel-agency-0dnf.onrender.com/users", {
       method: method,
       headers: {
         "Content-Type": "application/json",

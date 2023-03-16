@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Footer } from "../../pages/common/Footer";
 import { Header } from "../../pages/common/Header";
 import { useAuth } from "./../useProvider/useAuth";
@@ -7,6 +7,8 @@ import { useAuth } from "./../useProvider/useAuth";
 export const Login = () => {
   const { isLoading, loginUser, signInWidthGoogle, authError } = useAuth();
   const [showPass, setShowPass] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [Input, setInput] = useState({
     email: "",
@@ -15,7 +17,7 @@ export const Login = () => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    loginUser(Input.email, Input.password);
+    loginUser(Input.email, Input.password, location, navigate);
     event.target.reset();
   };
 
@@ -116,7 +118,7 @@ export const Login = () => {
               <div className="mt-6">
                 <div>
                   <button
-                    onClick={signInWidthGoogle}
+                    onClick={() => signInWidthGoogle(location, navigate)}
                     className="w-full inline-flex justify-center items-center py-2 px-4 rounded-md shadow-sm bg-black text-lg lg:text-xl font-medium text-white hover:bg-opacity-80  focus:outline-none focus:ring-2 focus:ring-black "
                   >
                     <i className="fa-brands fa-google mr-2"></i>Sign in with
@@ -127,10 +129,11 @@ export const Login = () => {
 
               <p className="mt-6 text-center text-base lg:text-lg font-medium text-gray-900">
                 New to SKS Network?
-                <Link to="/register">
-                  <a className="text-indigo-500 hover:text-indigo-600 font-medium">
-                    &nbsp;&nbsp;Sign up
-                  </a>
+                <Link
+                  to="/register"
+                  className="text-indigo-500 hover:text-indigo-600 font-medium"
+                >
+                  &nbsp;&nbsp;Sign up
                 </Link>
               </p>
               <br />

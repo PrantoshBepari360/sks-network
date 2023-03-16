@@ -22,9 +22,10 @@ export const Main = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Service />}></Route>
         <Route path="/packages" element={<All />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/support" element={<Support />}></Route>
-        <Route path="/*" element={<PrivetOutlet />}></Route>
+        <Route path="/*" element={<PrivetOutlet />}>
+        <Route path="contact" element={<Contact />}></Route>
+        <Route path="support" element={<Support />}></Route>
+        </Route>
         <Route path="/all" element={<All />}></Route>
         <Route path="/pricing" element={<Internet />}></Route>
         <Route path="/pricing2" element={<SmeMix />}></Route>

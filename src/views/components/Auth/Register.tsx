@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Footer } from "../../pages/common/Footer";
 import { Header } from "../../pages/common/Header";
 import { useAuth } from "../useProvider/useAuth";
@@ -9,6 +9,8 @@ export const Register = () => {
     useAuth();
   const [showPassConfirm, setShowPassConfirm] = useState(false);
   const [showPass, setShowPass] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [Input, setInput] = useState({
     displayName: "",
@@ -21,7 +23,13 @@ export const Register = () => {
     event.preventDefault();
     if (Input.password === Input.confirmPassword) {
       alert("Wow password matched!");
-      registerUser(Input?.email, Input?.password, Input?.displayName);
+      registerUser(
+        Input?.email,
+        Input?.password,
+        Input?.displayName,
+        location,
+        navigate
+      );
       event.target.reset();
     } else {
       alert("Oops! password dosen't match");
@@ -187,7 +195,7 @@ export const Register = () => {
               <div className="mt-6">
                 <div>
                   <button
-                    onClick={signInWidthGoogle}
+                    onClick={() => signInWidthGoogle(location, navigate)}
                     className="w-full inline-flex justify-center items-center py-2 px-4 rounded-md shadow-sm  bg-black text-lg lg:text-xl font-medium text-white focus:outline-none focus:ring-2 focus:ring-black hover:bg-opacity-80"
                   >
                     <i className="fa-brands fa-google mr-2"></i>Sign in with
@@ -197,10 +205,11 @@ export const Register = () => {
               </div>
               <p className="mt-6 text-center text-base lg:text-lg font-medium text-gray-900">
                 Have an account?
-                <Link to="/login">
-                  <a className="text-indigo-500 hover:text-indigo-600 font-medium">
-                    &nbsp;Sign in
-                  </a>
+                <Link
+                  to="/login"
+                  className="text-indigo-500 hover:text-indigo-600 font-medium"
+                >
+                  &nbsp;Sign in
                 </Link>
               </p>
               {(user as any).email && (

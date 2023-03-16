@@ -12,7 +12,7 @@ export const Service = () => {
         <Header></Header>
       </div>
       <br />
-      <div className="w-full pt-20">
+      <div className="w-full pt-20 md:pt-40 lg:pt-20">
         <Services></Services>
       </div>
       <div className="w-full">

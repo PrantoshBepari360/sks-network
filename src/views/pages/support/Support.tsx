@@ -13,7 +13,7 @@ export const Support = () => {
       </div>
 
       <div
-        className="bg-[#6D28D9] pt-20"
+        className="bg-[#6D28D9] pt-20 md:pt-44 lg:pt-20"
         style={{ fontFamily: "Hind Siliguri, sans-serif" }}
       >
         <p className="pt-10 text-[40px] text-[#e3e3e3]">
