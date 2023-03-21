@@ -45,16 +45,16 @@ export const Footer = () => {
             <p className="mb-4">Contuct</p>
             <hr className="mb-2" />
             <a className="mb-2 flex items-center" href="tel:+8801833078059">
-              <i className="fa-solid fa-phone mr-2"></i>
+              <i className="fa-solid fa-phone fa-shake mr-2"></i>
               <span className="hover:underline">+880 1833-078059</span>
             </a>
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://api.whatsapp.com/send?phone=8801833078059"
-              className="mb-2 flex"
+              className="mb-2 flex items-center"
             >
-              <i className="fa-brands fa-whatsapp mr-2 items-center"></i>{" "}
+              <i className="fa-brands fa-whatsapp mr-2 "></i>
               <span className="hover:underline">+880 1833-078059</span>
             </a>
             <a

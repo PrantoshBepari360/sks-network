@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../../assets/icon/logo.png";
 import { LoginModel } from "../loginModels/LoginModel";
-import { useAuth } from "./../../components/useProvider/useAuth";
+import { useAuth } from "../../components/useProvider/useAuth";
 
 const Navlinks = [
   {
     href: "/home",
-    icon: <i className="fa-solid fa-house-user" />,
+    icon: <i className="fa-solid fa-house" />,
     label: "Home",
   },
   {
@@ -64,7 +64,7 @@ export const Header = () => {
             {isMobileMenuOpen ? (
               <button
                 onClick={closeMobileMenu}
-                className="whitespace-nowrap text-xl md:text-xl p-2.5 flex gap-1.5 items-center justify-between rounded-full border hover:bg-gray-100  bg-transparent "
+                className="whitespace-nowrap text-xl md:text-xl p-2.5 flex gap-1.5 items-center justify-between rounded-full border hover:bg-gray-100 bg-transparent"
               >
                 <svg
                   stroke="currentColor"
@@ -104,28 +104,28 @@ export const Header = () => {
 
           <div className="hidden md:flex items-center py-5">
             {Navlinks?.map((navlink) => (
-              <Link
-                to={navlink.href}
-                target={navlink.target}
-                key={navlink.label}
+              <NavLink
+                to={navlink?.href}
+                target={navlink?.target}
+                key={navlink?.label}
                 className="mr-6 text-gray-800 text-base font-medium hover:text-lime-500 md:mr-4 lg:mr-5 xl:mr-6"
               >
-                <span className="text-base">{navlink.label}</span>
-              </Link>
+                <span className="text-base">{navlink?.label}</span>
+              </NavLink>
             ))}
           </div>
-          
+
           <div className="text-left">
             {user?.email ? (
               <button
                 onClick={logOut}
-                className="text-gray-800 text-base font-medium hover:text-orange-400"
+                className="text-gray-800 text-base font-medium hover:text-lime-500"
               >
                 Log out
               </button>
             ) : (
               <button
-                className="text-gray-800 text-base font-medium hover:text-orange-400"
+                className="text-gray-800 text-base font-medium hover:text-lime-500"
                 onClick={() => setIsLoginOpen(true)}
               >
                 Log in
@@ -146,21 +146,21 @@ export const Header = () => {
             <div className="px-3 py-8">
               <nav className="grid border">
                 {Navlinks?.map((navlink) => (
-                  <Link
+                  <NavLink
                     onClick={closeMobileMenu}
                     to={navlink.href}
                     target={navlink.target}
                     key={navlink.label}
-                    className="flex p-3 hover:bg-gray-100 hover:text-orange-500 border-b text-sm"
+                    className="flex p-3 hover:bg-gray-100 hover:text-lime-500 border-b text-sm"
                   >
-                    <p className="flex items-center text-orange-500">
+                    <p className="flex items-center text-lime-500">
                       {navlink.icon}
                     </p>
                     <span className="ml-5">{navlink.label}</span>
                     <span className="ml-auto">
                       <i className="fa-solid fa-angle-right"></i>
                     </span>
-                  </Link>
+                  </NavLink>
                 ))}
               </nav>
             </div>
