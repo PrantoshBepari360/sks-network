@@ -10,10 +10,10 @@ export const Form = () => {
 
     emailjs
       .sendForm(
-        "service_6oouttq",
-        "template_9s5loyv",
+        import.meta.env.REACT_SERVICE_ID,
+        import.meta.env.REACT_TEMPLATE_ID,
         form.current,
-        "user_FVv0JnRZ04GmOBVeo2Y1M"
+        import.meta.env.REACT_PUBLIC_KEY
       )
       .then(
         (result) => {

@@ -1,15 +1,17 @@
 import { Footer } from "../common/Footer";
-import { Header } from "../common/Header";
+// import { Header } from "../common/Header";
 import image1 from "../../../assets/img/Profile.jpg";
 import support from "../../../assets/img/Support.png";
 import { Typewriter } from "react-simple-typewriter";
 import { FormLink } from "../internet/RouteMix/FormLink";
+import Navbar from "../common/Navbar";
 
 export const Support = () => {
   return (
     <div className="w-full bg-gray-800 text-black">
       <div className="w-full bg-white fixed z-[100] drop-shadow-[0_1px_5px_rgba(193,193,193,0.3)]">
-        <Header></Header>
+        <Navbar />
+        {/* <Header /> */}
       </div>
 
       <div

@@ -6,46 +6,92 @@ import { useAuth } from "../../components/useProvider/useAuth";
 
 const Navlinks = [
   {
+    id: "1",
     href: "/home",
     icon: <i className="fa-solid fa-house" />,
     label: "Home",
   },
   {
+    id: "2",
     href: "/about",
     icon: <i className="fa-solid fa-address-card" />,
     label: "About",
   },
   {
+    id: "3",
     href: "/services",
     icon: <i className="fa-brands fa-servicestack" />,
     label: "Services",
   },
   {
+    id: "4",
     href: "/packages",
     icon: <i className="fa-solid fa-wifi" />,
     label: "Internet Packages",
   },
   {
+    id: "5",
     href: "/contact",
     icon: <i className="fa-solid fa-address-book" />,
     label: "Contact",
   },
   {
+    id: "6",
     href: "/support",
     icon: <i className="fa-solid fa-phone" />,
     label: "Support",
   },
   {
-    href: "http://smartbox.digital/jwtv1/index.php",
-    target: "_blank",
+    id: "7",
+    href: "#",
     icon: <i className="fa-solid fa-tv" />,
     label: "Live-Tv",
+    submenu: [
+      {
+        id: "9",
+        href: "http://tv.ebox.live/",
+        icon: <i className="fa-solid fa-tv" />,
+        title: "Live Server 1",
+      },
+      {
+        id: "10",
+        href: "http://tv.ebox.live/",
+        icon: <i className="fa-solid fa-tv" />,
+        title: "Live Server 2",
+      },
+      {
+        id: "11",
+        href: "http://tv.ebox.live/",
+        icon: <i className="fa-solid fa-tv" />,
+        title: "Live Server 3",
+      },
+    ],
   },
   {
-    href: "http://www.metromedia.digital",
-    target: "_blank",
-    icon: <i className="fa-solid fa-server" />,
+    id: "8",
+    href: "#",
+    icon: <i className="fa-solid fa-film" />,
     label: "Ftv",
+    submenu: [
+      {
+        id: "12",
+        href: "http://10.1.1.1/",
+        icon: <i className="fa-solid fa-film" />,
+        title: "Ftv Server 1",
+      },
+      {
+        id: "13",
+        href: "http://10.1.1.1/",
+        icon: <i className="fa-solid fa-film" />,
+        title: "Ftv Server 2",
+      },
+      {
+        id: "14",
+        href: "http://10.1.1.1/",
+        icon: <i className="fa-solid fa-film" />,
+        title: "Ftv Server 3",
+      },
+    ],
   },
 ];
 
@@ -54,6 +100,20 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const openMobileMenu = () => setIsMobileMenuOpen(true);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+  // const [theme, setTheme] = useState("light");
+
+  // useEffect(() => {
+  //   if (theme === "dark") {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }, [theme]);
+
+  // const handelDarkMode = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark");
+  // };
 
   return (
     <>
@@ -106,16 +166,15 @@ export const Header = () => {
             {Navlinks?.map((navlink) => (
               <NavLink
                 to={navlink?.href}
-                target={navlink?.target}
-                key={navlink?.label}
+                key={navlink?.id}
                 className="mr-6 text-gray-800 text-base font-medium hover:text-lime-500 md:mr-4 lg:mr-5 xl:mr-6"
               >
-                <span className="text-base">{navlink?.label}</span>
+                <span>{navlink.label}</span>
               </NavLink>
             ))}
           </div>
 
-          <div className="text-left">
+          <div className="flex text-left">
             {user?.email ? (
               <button
                 onClick={logOut}
@@ -131,6 +190,9 @@ export const Header = () => {
                 Log in
               </button>
             )}
+            {/* <div className="ml-2 flex items-center">
+              <button onClick={handelDarkMode}>Dark Mode</button>
+            </div> */}
           </div>
         </div>
 
@@ -148,9 +210,8 @@ export const Header = () => {
                 {Navlinks?.map((navlink) => (
                   <NavLink
                     onClick={closeMobileMenu}
-                    to={navlink.href}
-                    target={navlink.target}
-                    key={navlink.label}
+                    to={navlink?.href}
+                    key={navlink?.id}
                     className="flex p-3 hover:bg-gray-100 hover:text-lime-500 border-b text-sm"
                   >
                     <p className="flex items-center text-lime-500">
