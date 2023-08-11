@@ -12,10 +12,13 @@ import { Login } from "../../components/Auth/Login";
 import { PrivetOutlet } from "../../components/Auth/PrivetOutlet";
 import { All } from "../internet/All";
 import { Support } from "../support/Support";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
 
 export const Main = () => {
   return (
     <div className="text-center">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -34,6 +37,7 @@ export const Main = () => {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 };

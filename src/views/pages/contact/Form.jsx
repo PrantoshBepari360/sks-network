@@ -10,10 +10,10 @@ export const Form = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.REACT_SERVICE_ID,
-        import.meta.env.REACT_TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
-        import.meta.env.REACT_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -23,6 +23,7 @@ export const Form = () => {
           console.log(error.text);
         }
       );
+
     e.target.reset();
     setSuccess(true);
   };

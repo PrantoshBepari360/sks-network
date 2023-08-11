@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Footer } from "../../pages/common/Footer";
-import { Header } from "../../pages/common/Header";
 import { useAuth } from "./../useProvider/useAuth";
 
 export const Login = () => {
@@ -23,9 +21,6 @@ export const Login = () => {
 
   return (
     <div>
-      <div className="w-full bg-white fixed z-[100] drop-shadow-[0_1px_5px_rgba(193,193,193,0.3)]">
-        <Header></Header>
-      </div>
       <div className="rounded-lg overflow-hidden grid">
         <div className="w-full md:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto py-20 mt-10">
           <div className="flex flex-col justify-start items-start mb-10">
@@ -141,9 +136,6 @@ export const Login = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full">
-        <Footer></Footer>
       </div>
     </div>
   );
