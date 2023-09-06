@@ -55,8 +55,8 @@
       },
       {
         "id": 11,
-        "name": "Amar BD",
-        "href": "http://amrbd.com/",
+        "name": "Dhaka Flix!!",
+        "href": "http://172.21.22.2/",
         "icon": "fa-solid fa-tv",
         "children": [
           {
@@ -90,12 +90,6 @@
         "name": "Bdiptv Stream",
         "href": "https://bdiptv.stream/live-tv.html",
         "icon": "fa-solid fa-tv"
-      },
-      {
-        "id": 27,
-        "name": "Tv Ebox",
-        "href": "http://tv.ebox.live/",
-        "icon": "fa-solid fa-tv"
       }
     ]
   },
@@ -107,66 +101,34 @@
     "children": [
       {
         "id": 16,
-        "name": "Ftv Server 1",
-        "href": "http://10.1.1.1/",
+        "name": "Bongo BD",
+        "href": "https://bongobd.com/movies",
+
         "icon": "fa-solid fa-film"
       },
       {
         "id": 17,
-        "name": "Ftv Server 2",
-        "href": "http://10.1.1.1/",
+        "name": "Bioscope Live",
+        "href": "https://www.bioscopelive.com/movies",
+
         "icon": "fa-solid fa-film"
       },
       {
         "id": 18,
-        "name": "Ftv Server 3",
-        "href": "http://10.1.1.1/",
-        "icon": "fa-solid fa-film",
-        "children": [
-          {
-            "id": 20,
-            "name": "Ftv Server 1",
-            "href": "http://10.1.1.1/",
-            "icon": "fa-solid fa-film"
-          },
-          {
-            "id": 21,
-            "name": "Ftv Server 2",
-            "href": "http://10.1.1.1/",
-            "icon": "fa-solid fa-film",
-            "children": [
-              {
-                "id": 23,
-                "name": "Ftv Server 1",
-                "href": "http://10.1.1.1/",
-                "icon": "fa-solid fa-film"
-              },
-              {
-                "id": 24,
-                "name": "Ftv Server 2",
-                "href": "http://10.1.1.1/",
-                "icon": "fa-solid fa-film"
-              },
-              {
-                "id": 25,
-                "name": "Ftv Server 3",
-                "href": "http://10.1.1.1/",
-                "icon": "fa-solid fa-film"
-              }
-            ]
-          },
-          {
-            "id": 22,
-            "name": "Ftv Server 3",
-            "href": "http://10.1.1.1/",
-            "icon": "fa-solid fa-film"
-          }
-        ]
+        "name": "Sam Online",
+        "href": "http://172.16.50.4/",
+        "icon": "fa-solid fa-film"
       },
       {
         "id": 19,
-        "name": "Ftv Server 4",
-        "href": "http://10.1.1.1/",
+        "name": "Ihub live",
+        "href": "http://ihub.live/",
+        "icon": "fa-solid fa-film"
+      },
+      {
+        "id": 20,
+        "name": "Showtime BD",
+        "href": "http://showtimebd.com/",
         "icon": "fa-solid fa-film"
       }
     ]
