@@ -9,11 +9,11 @@ import { SmeMix } from "../internet/RouteMix/SmeMix";
 import { Service } from "../services/Service";
 import { Register } from "../../components/Auth/Register";
 import { Login } from "../../components/Auth/Login";
-import { PrivetOutlet } from "../../components/Auth/PrivetOutlet";
+// import { PrivetOutlet } from "../../components/Auth/PrivetOutlet";
 import { All } from "../internet/All";
 import { Support } from "../support/Support";
 import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { Header } from "./navbar/Header";
 
 export const Main = () => {
   return (
@@ -25,10 +25,12 @@ export const Main = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Service />}></Route>
         <Route path="/packages" element={<All />}></Route>
-        <Route path="/*" element={<PrivetOutlet />}>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/support" element={<Support />}></Route>
+        {/* <Route path="/*" element={<PrivetOutlet />}>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="support" element={<Support />}></Route>
-        </Route>
+        </Route> */}
         <Route path="/all" element={<All />}></Route>
         <Route path="/pricing" element={<Internet />}></Route>
         <Route path="/pricing2" element={<SmeMix />}></Route>

@@ -1,23 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../../assets/icon/logo.png";
-import { useAuth } from "../../components/useProvider/useAuth";
+import { useAuth } from "../../../components/useProvider/useAuth";
+import { Navlinks } from "./Navlinks";
+import logo from "../../../../assets/icon/logo.png";
 
 export const Header = () => {
-  // Fetch data
-  const [Navlinks, setData] = useState();
-  useEffect(() => {
-    (async function () {
-      const res = await fetch("./Nav.JSON");
-      res
-        .json()
-        .then((data) => setData(data))
-        .catch((err) => {
-          console.log(err);
-        });
-    })();
-  }, []);
-
   const [showSubMenu, setShowSubMenu] = useState([]);
   const { user, logOut } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -171,11 +158,11 @@ export const Header = () => {
                 onClick={logOut}
                 className="text-gray-800 text-base font-medium hover:text-lime-500"
               >
-                Log out
+                Sign out
               </button>
             ) : (
               <button className="text-gray-800 text-base font-medium hover:text-lime-500">
-                <Link to="/login">Log in</Link>
+                <Link to="/login">Sign in</Link>
               </button>
             )}
             {/* <div className="ml-2 flex items-center">

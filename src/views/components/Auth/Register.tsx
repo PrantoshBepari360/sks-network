@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../useProvider/useAuth";
+import img from "../../../assets/img/auth.png";
 
 export const Register = () => {
   const { isLoading, registerUser, signInWidthGoogle, authError, user } =
@@ -35,15 +36,15 @@ export const Register = () => {
   };
 
   return (
-    <div>
-      <div className="rounded-lg overflow-hidden grid">
+    <>
+      <div className="rounded-lg  grid md:grid-cols-2">
         <div className="w-full md:w-11/12 lg:w-9/12 xl:w-8/12 2xl:w-7/12 mx-auto py-20 mt-10">
           <div className="flex flex-col justify-start items-start mb-10">
             <h1 className="text-gray-900 font-bold text-3xl font-title pl-4">
               Create an account
             </h1>
           </div>
-          <div className="rounded-lg px-4">
+          <div className="rounded-lg px-4 card border w-96 mx-auto p-2 shadow-md shadow-[#298280] ">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <div className="flex items-center justify-between">
@@ -168,7 +169,7 @@ export const Register = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg lg:text-xl font-medium  text-white bg-black hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-black "
+                  className="w-full py-2 px-4  rounded-md  text-lg lg:text-xl font-semibold hover:text-white  text-black bg-[#34c5c2] hover:bg-[#246463]"
                 >
                   {isLoading ? "Loading..." : "Register"}
                 </button>
@@ -187,18 +188,17 @@ export const Register = () => {
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-6 text-center">
                 <div>
                   <button
                     onClick={() => signInWidthGoogle(location, navigate)}
-                    className="w-full inline-flex justify-center items-center py-2 px-4 rounded-md shadow-sm  bg-black text-lg lg:text-xl font-medium text-white focus:outline-none focus:ring-2 focus:ring-black hover:bg-opacity-80"
-                  >
-                    <i className="fa-brands fa-google mr-2"></i>Sign in with
-                    Google
+                    className=" border-2 p-2 rounded-full shadow-sm hover:shadow-teal-400 "
+                    >
+                      Google
                   </button>
                 </div>
               </div>
-              <p className="mt-6 text-center text-base lg:text-lg font-medium text-gray-900">
+              <p className="mt-6 text-center text-sm font-medium text-gray-900">
                 Have an account?
                 <Link
                   to="/login"
@@ -207,15 +207,16 @@ export const Register = () => {
                   &nbsp;Sign in
                 </Link>
               </p>
-              {(user as any).email && (
-                <div className="">User Created successfully</div>
-              )}
+              {user?.email && <div className="">User Created successfully</div>}
               <br />
               {authError && <div className="">{authError}</div>}
             </div>
           </div>
         </div>
+        <div className="flex items-center justify-center">
+         <img src={img} alt="" />
+        </div>
       </div>
-    </div>
+    </>
   );
 };

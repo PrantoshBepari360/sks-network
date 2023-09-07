@@ -3,9 +3,9 @@ export const Location = () => {
     <div className="">
       <h1
         className="py-8 sm:text-3xl font-medium text-[#ff7602]"
-        style={{ fontFamily: "Oswald, sans-serif" }}
+        style={{ fontFamily: "Hind Siliguri, sans-serif" }}
       >
-        Dhamusa, Dasar, Madaripur.
+        ধামুসা, ডাসার, মাদারীপুর-৭৯০০।
       </h1>
       <iframe
         title="myFrame"
