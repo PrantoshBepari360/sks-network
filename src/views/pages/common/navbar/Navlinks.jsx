@@ -61,12 +61,18 @@ export const Navlinks = [
         },
         {
           "id": 12,
+          "name": "Smart Box",
+          "href": "http://smartbox.digital/jwtv1/index.php",
+          "icon": "fa-solid fa-tv"
+        },
+        {
+          "id": 13,
           "name": "Bdtv Live",
           "href": "http://bdtv.live/live-tv.html",
           "icon": "fa-solid fa-tv"
         },
         {
-          "id": 26,
+          "id": 14,
           "name": "Bdiptv Stream",
           "href": "https://bdiptv.stream/live-tv.html",
           "icon": "fa-solid fa-tv"

@@ -8,7 +8,7 @@ import { Hosting } from "./Hosting";
 export const Home = () => {
   return (
     <div>
-      <div className="w-full background-img bg-fixed">
+      <div className="w-full bg-[url('/public/bg.gif')] bg-cover">
         <Banar></Banar>
       </div>
       <div className="w-full">

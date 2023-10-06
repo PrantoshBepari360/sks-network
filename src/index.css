@@ -4,13 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Raleway:wght@300;400;500;600;700;900&family=Hind+Siliguri:wght@300;400;500;600;700;900&family=Oswald:wght@300;400;500;600;700;900&display=swap");
 
-.background-img {
-  background-image: url(../src/assets/img/bg.gif);
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-
 .active {
   color: rgb(132 204 22);
 }
